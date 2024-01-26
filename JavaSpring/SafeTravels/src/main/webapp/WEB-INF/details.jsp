@@ -21,7 +21,7 @@
 			<h2>Expense Vendor: <c:out value="${expense.vendor }"/></h2>
 		</div>
 		<div class="row mb-3">
-			<h2>Expense Amount: <c:out value="${expense.amount}"/></h2>
+			<h2>Expense Amount: $<c:out value="${expense.amount}"/></h2>
 		</div>
 		<div class="row mb-3">
 		<h2>Expense Description: <c:out value="${expense.description}"/></h2>

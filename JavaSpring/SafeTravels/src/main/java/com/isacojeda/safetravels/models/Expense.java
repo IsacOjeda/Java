@@ -39,7 +39,6 @@ public class Expense {
 	
 	
 	@NotNull(message="Must Not be Blank")
-	@NotNull
 	@Size(min=5,max=255,message="Must be at least 5 Characters")
 	private String description;
 
@@ -59,7 +58,6 @@ public class Expense {
     @PreUpdate
     protected void onUpdate(){
         this.updatedAt = new Date();
-        
         
     }
     
@@ -120,8 +118,4 @@ public class Expense {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
-    
-    
-    
-
 }

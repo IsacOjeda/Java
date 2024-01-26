@@ -58,14 +58,12 @@ public class ExpenseController {
 	
 		
 	}
-	
-	
+
 	@DeleteMapping(value="/expenses/{id}")
 	public String destroy(@PathVariable("id")Long id) {
 		expenseService.deleteExpense(id);
 		return "redirect:/";
 	}
-	
 	
 	@GetMapping("/expense/{id}")
 	public String expenseDetails(Model model, @PathVariable("id")Long id) {

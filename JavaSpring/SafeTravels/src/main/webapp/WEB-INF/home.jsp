@@ -11,12 +11,13 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<div class="container" >
+		<h1>Safe Travels</h1>
+	</div>
+	
 	<div class="container">
 		<table class="table"> 
 		<thead>
-			<div class="container" >
-			<h1>Safe Travels</h1>
-			</div>
 			<tr>
 				<th>Expense</th>
 				<th>Vendor</th>
@@ -29,7 +30,7 @@
 				<tr>
 					<td><a href="/expense/${expense.id }" ><c:out value="${expense.name }"/></a></td>
 					<td><c:out value="${expense.vendor }"/></td>
-					<td><c:out value="${expense.amount}"/></td>
+					<td>$<c:out value="${expense.amount}"/></td>
 					<td><a href="/edit/${expense.id }">edit</a>
 					<td>
 					  <form action="/expenses/${expense.id }" method="post">

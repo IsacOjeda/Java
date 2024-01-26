@@ -17,7 +17,7 @@
 
 	<form:form action="/edit/${expense.id}" mode="put" modelAttribute="expense">
 	
-	<div><h1>Edit Burger</h1></div>
+	<div><h1>Edit Expense</h1></div>
 	
 			<div class="row mb-3">
 				<form:label path="name" >Expense Name</form:label>
@@ -25,12 +25,12 @@
 				<form:input path="name" class="form-control" />
 			</div>
 			<div class="row mb-3">
-				<form:label path="vendor">Restaurant Name</form:label>
+				<form:label path="vendor">Vendor Name</form:label>
 			    <form:errors path="vendor" class="text-danger" />
 				<form:input path="vendor" class="form-control"/>
 			</div>
 			<div class="row mb-3">
-				<form:label path="amount">Rating</form:label>
+				<form:label path="amount">Amount</form:label>
 			    <form:errors path="amount" class="text-danger" />
 				<form:input type="number" path="amount" class="form-control"/>
 			</div>
