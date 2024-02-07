@@ -14,5 +14,31 @@
 <body>
 	<h1> Admin room details
 	</h1>
+	
+	
+	<div class="container">
+	<h1>Reserve</h1>
+	<h1>Room <c:out value="${oneRoom.id }"/></h1>
+	<h3>Floor: <c:out value="${oneRoom.floor }"/></h3>
+	<h3>Type: <c:out value="${oneRoom.type }"/></h3>
+	<h3>Status: <c:out value="${oneRoom.status }"/></h3>
+	
+	
+
+	
+	<form:form action="rooms/${oneRoom.id}" method="post" modelAttribute="oneRoom">
+		<div class="form-floating mb-3">
+  		<form:input path="guestName" type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+  		<form:label path="guestName" for="floatingInput">Guest Name:</form:label>
+  		<form:errors path="guestName" class="text-danger"/>			
+	</div>
+	
+	<div class="form-floating mb-3">
+  		<form:input path="guestEmail" type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+  		<form:label path="guestEmail" for="floatingInput">Guest Email:</form:label>
+  		<form:errors path="guestEmail" class="text-danger"/>			
+	</div>	
+	</form:form>
+	</div>
 </body>
 </html>

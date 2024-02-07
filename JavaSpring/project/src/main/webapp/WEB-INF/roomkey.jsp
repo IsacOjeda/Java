@@ -13,5 +13,10 @@
 </head>
 <body>
 		<h1>Room key</h1>
+		
+		<div class="me-auto m-auto d-flex flex-column">
+		<h1>Here is your room key!</h1>
+		<img src="/images/qrcode_94725083_0664b249d8bf05b01a27d00df04f8bc1.png" style="height:250px; width:250px;" />
+		</div>
 </body>
 </html>

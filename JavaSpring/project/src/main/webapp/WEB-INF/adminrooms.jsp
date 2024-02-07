@@ -26,8 +26,10 @@
 			<h2>Room: <c:out value="${room.id }"/> </h2>	
 			<h3>Floor:  <c:out value="${room.floor }"/></h3>	
 			<h3>Status:  <c:out value="${room.status }"/></h3>	
+
+			
 			<div class="container">
-				<a href="/rooms/${room.id}">View Now</a>
+				<a href="/rooms/edit/${room.id}">Edit</a>
 			</div>
 
 			

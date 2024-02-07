@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import com.isacojeda.project.models.Room;
 import com.isacojeda.project.services.RoomService;
@@ -46,18 +47,30 @@ public class RoomController {
 			return "adminadd.jsp";
 		}else {
 			roomService.addRoom(newRoom);
-			return "adminrooms.jsp";
+			return "redirect:/login";
 		}
 		
 	}
 	
-	@GetMapping("/rooms/{id}")
+	@GetMapping("/rooms/reserve/{id}")
 	public String details(@PathVariable("id")Long id,
 			Model model) {
 		Room oneRoom = roomService.oneRoom(id);
 		model.addAttribute("oneRoom",oneRoom);
 		return "reserve.jsp";
 	}
+	
+	@PutMapping("/rooms/reserve/complete")
+	public String bookRoom(@Valid  @ModelAttribute("oneRoom")Room oneRoom,BindingResult result) {
+		if(result.hasErrors()) {
+			return "reserve.jsp";
+		}else {
+			roomService.updateRoom(oneRoom);
+			return "roomkey.jsp";
+		}
+	}
+			
+			
 	
 	
 	@GetMapping("/rooms")
@@ -66,6 +79,6 @@ public class RoomController {
 		model.addAttribute("roomList",allRooms);
 		return "rooms.jsp";
 	}
-	
+
 
 }

@@ -27,10 +27,8 @@ public class Room {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull
 	private int floor;
 
-	@NotNull
 	private String type;
 	
 	private String guestName;
@@ -43,7 +41,6 @@ public class Room {
 	
 	private Date checkOut;
 	
-	@NotNull
 	private String status;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
