@@ -25,15 +25,15 @@ public class BankTest {
 
             account2.withdrawSavings(1200);
 
-            account3.withdrawBoth(25,950);
+            account3.withdrawBoth(50,950);
                          // checkings,savings
 
         // Static Test (print the number of bank accounts and the totalMoney)
             System.out.println("Number of Bank Accounts : " + account1.getAccountsTotal());
             System.out.println("Total Money : $"+ account1.getTotalMoney());
         
-            // account1.balances();
-            // account2.balances();
-            // account3.balances();
+            account1.balances();
+            account2.balances();
+            account3.balances();
     }
 }
